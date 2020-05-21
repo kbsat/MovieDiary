@@ -5,8 +5,61 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MovieDiary"
         mc:Ignorable="d"
-        Title="ReviewWindow" Height="450" Width="800">
+        Title="리뷰하기" Height="500" Width="700
+        " Background="White">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="14*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="1.4*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.2*"/>
+        </Grid.RowDefinitions>
+        <!--영화 정보 부-->
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="0.5*"/>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="1" Source="poster_sample.jpg" Margin="5"/>
+            <StackPanel Orientation="Vertical" Grid.Column="2" Margin="3">
+                <Label x:Name="title" Content="프리즌 이스케이프" FontSize="17" FontWeight="Bold" FontFamily="HYHeadLine"/>
+                <Label x:Name="opening_data" Content="2020.05.06" FontSize="13"/>
+                <Label x:Name="genre" Content="모험, 스릴러" FontSize="13"/>
+                <Label x:Name="director_name" Content="감독 : 프란시스 아난" FontSize="13" />
+                <Label x:Name="actor_name" Content="출연진 : 다니엘 래드클리프(팀), 다니엘 웨버(스티븐)" FontSize="13" />
+            </StackPanel>
+        </Grid>
+        <!--리뷰 작성 부-->
+        <Border  Grid.Row="2" Grid.Column="1" Grid.RowSpan="2" BorderThickness="1" BorderBrush="Black" Margin="1">
+            <StackPanel Grid.Row="2" Grid.Column="1" Grid.RowSpan="2">
+                <Label Content="리뷰 작성" Padding="5" BorderBrush="Black" BorderThickness="0 0 0 3" Foreground="White">
+                    <Label.Background>
+                        <SolidColorBrush Color="#FF2A8AD6"/>
+                    </Label.Background>
+                </Label>
+                <StackPanel Orientation="Horizontal" Height="40" HorizontalAlignment="Right" Margin="0 0 26 0">
+                    <!-- 별점 들어갈 부분-->
+                    <Image x:Name="star_1" Source="star.png" Width="30" Margin="0 0 5 0" MouseDown="star_MouseDown" MouseUp="star_MouseUp"/>
+                    <Image x:Name="star_2" Source="star.png" Width="30" Margin="0 0 5 0" MouseDown="star_MouseDown" MouseUp="star_MouseUp"/>
+                    <Image x:Name="star_3" Source="unstar.png" Width="30" Margin="0 0 5 0" MouseDown="star_MouseDown" MouseUp="star_MouseUp"/>
+                    <Image x:Name="star_4" Source="unstar.png" Width="30" Margin="0 0 5 0" MouseDown="star_MouseDown" MouseUp="star_MouseUp"/>
+                    <Image x:Name="star_5" Source="unstar.png" Width="30" MouseDown="star_MouseDown" MouseUp="star_MouseUp"/>
+                </StackPanel>
+                <TextBox HorizontalAlignment="Center" VerticalAlignment="Center" Height="150" TextWrapping="Wrap" Text="TextBox" Width="550" BorderBrush="#FF2B2B2B" Background="#FFEAEAEA" Foreground="Black" FontSize="16"/>
+                <Button Content="삭제" Width="60" Height="20" HorizontalAlignment="Left" Margin="26,5,0,0" FontWeight="Bold" Foreground="White" Background="#FFDE5050" BorderBrush="#FFBD9595" Click="DeleteButton_Click"/>
+                <Button Content="저장/등록" Width="100" Height="20" HorizontalAlignment="Right"  Margin="0,-20,26,0" FontWeight="Bold" BorderBrush="#FF939393" Foreground="White" Background="#FF6074F3"/>
+            </StackPanel>
+        </Border>
+
+
+
     </Grid>
 </Window>
