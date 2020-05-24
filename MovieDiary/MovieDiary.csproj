@@ -127,5 +127,20 @@
   <ItemGroup>
     <Resource Include="unstar.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="darkknight.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="mazerunner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="oceans eleven.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="aladdin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="-Green_triangle.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

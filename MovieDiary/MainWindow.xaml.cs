@@ -23,6 +23,13 @@ namespace MovieDiary
         public MainWindow()
         {
             InitializeComponent();
+            ReviewWindow win = new ReviewWindow();
+            win.ShowDialog();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

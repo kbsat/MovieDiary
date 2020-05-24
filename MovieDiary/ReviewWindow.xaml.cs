@@ -19,6 +19,7 @@ namespace MovieDiary
     /// </summary>
     public partial class ReviewWindow : Window
     {
+        int star_num;
         public ReviewWindow()
         {
             InitializeComponent();
@@ -35,6 +36,7 @@ namespace MovieDiary
                 star_3.Source = unstar;
                 star_4.Source = unstar;
                 star_5.Source = unstar;
+                star_num = 1;
             }
             else if (sender.Equals(star_2))
             {
@@ -43,6 +45,7 @@ namespace MovieDiary
                 star_3.Source = unstar;
                 star_4.Source = unstar;
                 star_5.Source = unstar;
+                star_num = 2;
 
             }
             else if (sender.Equals(star_3))
@@ -52,6 +55,7 @@ namespace MovieDiary
                 star_3.Source = star;
                 star_4.Source = unstar;
                 star_5.Source = unstar;
+                star_num = 3;
             }
             else if(sender.Equals(star_4))
             {
@@ -60,7 +64,7 @@ namespace MovieDiary
                 star_3.Source = star;
                 star_4.Source = star;
                 star_5.Source = unstar;
-
+                star_num = 4;
             }
             else if(sender.Equals(star_5))
             {
@@ -69,6 +73,7 @@ namespace MovieDiary
                 star_3.Source = star;
                 star_4.Source = star;
                 star_5.Source = star;
+                star_num = 5;
             }
             else
             {
