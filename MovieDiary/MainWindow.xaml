@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MovieDiary"
         mc:Ignorable="d"
-        Title="MainWindow" Height="760" Width="567">
+        Title="MainWindow" Height="770.293" Width="567">
     <Grid HorizontalAlignment="Left" Height="604" Margin="-3,0,-3.2,-2.4" VerticalAlignment="Top" Width="561">
         <Label Content="&#x9;&#x9;&#x9;&#x9;&#x9;내 책장" Padding="5" BorderBrush="Black" BorderThickness="0 0 0 3" Foreground="White" Background="#FF2A8AD6" Margin="0,0,0,575"/>
         <Grid HorizontalAlignment="Left" Height="662" Margin="0,29,-12,-87" VerticalAlignment="Top" Width="561">
@@ -20,7 +20,8 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Border Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" BorderThickness="2" BorderBrush="Black"/>
-            <Border Grid.Column="1"  Grid.Row="0" Grid.RowSpan="3" BorderThickness="2" BorderBrush="Black"/>
+            <Border Grid.Column="1"  Grid.Row="0" Grid.RowSpan="3" BorderThickness="2" BorderBrush="Black">
+            </Border>
             <Border Grid.Column="2" Grid.Row="0" Grid.RowSpan="3" BorderThickness="2" BorderBrush="Black"/>
             <Image Margin="12,10,8,11.8" Source="darkknight.jpg"/>
             <Rectangle Fill="#FFD5D5D6" HorizontalAlignment="Left" Height="12" Margin="0,214,0,0" Stroke="Black" VerticalAlignment="Top" Width="564" Grid.RowSpan="2" Grid.ColumnSpan="3"/>
@@ -29,7 +30,7 @@
             <Image Margin="10,11.2,10,9.6" Grid.Row="1" Source="aladdin.png"/>
             <Rectangle Fill="#FFD5D5D6" HorizontalAlignment="Left" Height="12" Margin="0,216.2,0,0" Stroke="Black" VerticalAlignment="Top" Width="564" Grid.RowSpan="2" Grid.ColumnSpan="3" Grid.Row="1"/>
         </Grid>
-        <Button Content="영화 추가" HorizontalAlignment="Left" Height="23" Margin="19,694,0,-113" VerticalAlignment="Top" Width="143" RenderTransformOrigin="0.5,0.5" Click="Button_Click" Background="White">
+        <Button Content="영화 추가" HorizontalAlignment="Left" Height="23" Margin="19,700,0,-119" VerticalAlignment="Top" Width="143" RenderTransformOrigin="0.5,0.5" Click="Button_Click" Background="White">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -39,6 +40,26 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
+        <Image Margin="242,700,286,-122" Source="-Green_triangle.png" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Margin="236,747,295,-192" Source="-Green_triangle.png" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform X="51.112" Y="-58.348"/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
     </Grid>
 
 </Window>

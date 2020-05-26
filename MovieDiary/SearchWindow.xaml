@@ -6,16 +6,14 @@
         xmlns:local="clr-namespace:MovieDiary"
         mc:Ignorable="d"
         Title="SearchWindow" Height="646.722" Width="634.424">
-    <Grid HorizontalAlignment="Left" Height="612" Margin="0,0,-6,-1.6" VerticalAlignment="Top" Width="634">
-        <Rectangle Fill="White" HorizontalAlignment="Left" Height="30" Margin="53,49,0,0" Stroke="Black" VerticalAlignment="Top" Width="539"/>
-        <Label Content="영화 제목" HorizontalAlignment="Left" Margin="65,50,0,0" VerticalAlignment="Top" Height="30" FontSize="14" FontWeight="Bold"/>
-        <TextBox HorizontalAlignment="Left" Height="29" Margin="147,50,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="372" TextChanged="TextBox_TextChanged"/>
+    <Grid HorizontalAlignment="Left" Height="618" Margin="0,0,-6,-1.2" VerticalAlignment="Top" Width="634">
+        <Rectangle Fill="White" HorizontalAlignment="Left" Height="30" Margin="30,49,0,0" Stroke="Black" VerticalAlignment="Top" Width="562"/>
+        <Label Content="영화 제목" HorizontalAlignment="Left" Margin="40,51,0,0" VerticalAlignment="Top" Height="30" FontSize="14" FontWeight="Bold"/>
+        <TextBox HorizontalAlignment="Left" Height="29" Margin="121,50,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="398" TextChanged="TextBox_TextChanged"/>
         <Button Content="검색" HorizontalAlignment="Left" Margin="517,50,0,0" VerticalAlignment="Top" Width="75" Height="29" Background="#FF2A8AD6" FontSize="14" FontWeight="Bold"/>
-        <StackPanel HorizontalAlignment="Left" Height="488" Margin="53,96,0,0" VerticalAlignment="Top" Width="539">
-            <Rectangle Fill="White" Height="163" Stroke="Black" Margin="0,0,0.2,0"/>
-            <Rectangle Fill="White" Height="163" Stroke="Black" Margin="0,0,0.2,0"/>
-            <Rectangle Fill="White" Height="158" Stroke="Black" Margin="0,0,0.2,0"/>
-        </StackPanel>
-        <Button Content="내 서재에 추가" HorizontalAlignment="Left" Margin="473,589,0,0" VerticalAlignment="Top" Width="119" Background="#FF4079C2" Height="23"/>
+        <Button Content="내 서재에 추가" HorizontalAlignment="Left" Margin="469,589,0,0" VerticalAlignment="Top" Width="119" Background="#FF4079C2" Height="23"/>
+        <ListBox x:Name="myContact" HorizontalAlignment="Left" Height="482" Margin="30,94,0,0" VerticalAlignment="Top" Width="562">
+            <local:UserControl1 x:Name="userControl1" HorizontalAlignment="Left" Height="161" VerticalAlignment="Top" Width="552"/>
+        </ListBox>
     </Grid>
 </Window>

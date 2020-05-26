@@ -22,11 +22,19 @@ namespace MovieDiary
         public SearchWindow()
         {
             InitializeComponent();
+            Contact contact = new Contact(); 
+            contact.Title = "프리즌 이스케이프";
+            contact.OpeningData = "2020.05.06";
+            contact.Genre = "모험,스릴러";
+            contact.DirectorName = "프란시스 아난";
+            contact.DirectorName = "다니엘 래드클리프";
+
+            myContact.ContactData = contact;
+
+
+
+
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
     }
 }
