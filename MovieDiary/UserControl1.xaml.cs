@@ -32,9 +32,15 @@ namespace MovieDiary
                 contactdata = value;
                 titleBlock.Text = contactdata.Title;
                 openingBlock.Text = contactdata.OpeningData;
-                genreBlock.Text = contactdata.Genre;
-                directorBlock.Text = contactdata.DirectorName;
-                actorBlock.Text = contactdata.ActorName;
+                subtitleBlock.Text = contactdata.SubTitle;
+                directorBlock.Text = "감독 : " + contactdata.DirectorName;
+                actorBlock.Text = "배우 : " + contactdata.ActorName;
+
+                if (!contactdata.imageUri.Equals("")) // 이미지 uri가 비어있지 않다면
+                {
+                    imageBox.Source = new BitmapImage(new Uri(contactdata.imageUri));
+                }
+                
             }
         }
         public UserControl1()
@@ -46,9 +52,10 @@ namespace MovieDiary
     {
         public string Title { get; set; }
         public string OpeningData { get; set; }
-        public string Genre { get; set; }
+        public string SubTitle { get; set; }
         public string DirectorName { get; set; }
         public string ActorName { get; set; }
+        public string imageUri { get; set; }
     }
 }
 

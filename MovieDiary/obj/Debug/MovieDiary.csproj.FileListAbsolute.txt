@@ -39,3 +39,8 @@ C:\Users\User\Desktop\윈프 제안서\MovieDiary\obj\Debug\MovieDiary.Propertie
 C:\Users\User\Desktop\윈프 제안서\MovieDiary\obj\Debug\MovieDiary.csproj.GenerateResource.cache
 C:\Users\User\Desktop\윈프 제안서\MovieDiary\obj\Debug\MovieDiary.exe
 C:\Users\User\Desktop\윈프 제안서\MovieDiary\obj\Debug\MovieDiary.pdb
+D:\수업\3학년2학기\윈도우즈 프로그래밍\MovieDiary\MovieDiary\obj\Debug\UserControl1.g.cs
+D:\수업\3학년2학기\윈도우즈 프로그래밍\MovieDiary\MovieDiary\obj\Debug\UserControl1.baml
+D:\수업\3학년2학기\윈도우즈 프로그래밍\MovieDiary\MovieDiary\bin\Debug\Newtonsoft.Json.dll
+D:\수업\3학년2학기\윈도우즈 프로그래밍\MovieDiary\MovieDiary\bin\Debug\Newtonsoft.Json.xml
+D:\수업\3학년2학기\윈도우즈 프로그래밍\MovieDiary\MovieDiary\obj\Debug\MovieDiary.csproj.CopyComplete

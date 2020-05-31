@@ -4,18 +4,16 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MovieDiary"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Margin="0,0,350,285.6">
-        <Grid Background="LightBlue" HorizontalAlignment="Left" Height="163" VerticalAlignment="Top" Width="450">
-            <Image HorizontalAlignment="Left" Margin="10,10,0,10" Width="106"/>
+             mc:Ignorable="d" Height="160.924" Width="562">
+    <Grid>
+        <Grid Background="LightBlue" HorizontalAlignment="Left" Height="163" VerticalAlignment="Top" Width="562">
+            <Image x:Name="imageBox"  HorizontalAlignment="Left" Margin="10,10,0,10" Width="106"/>
             <StackPanel HorizontalAlignment="Left" Height="143" Margin="121,10,0,0" VerticalAlignment="Top" Width="319">
                 <TextBlock x:Name="titleBlock" TextWrapping="Wrap" Text="Title" FontSize="20" FontWeight="Bold"/>
+                <TextBlock x:Name="subtitleBlock" TextWrapping="Wrap" Text="subtitle" FontSize="15"/>
                 <TextBlock x:Name="openingBlock" TextWrapping="Wrap" Text="openingData" FontSize="15"/>
-                <TextBlock x:Name="genreBlock" TextWrapping="Wrap" Text="genre" FontSize="15"/>
-                <TextBlock x:Name="directorBlock" TextWrapping="Wrap" Text="directorName" FontSize="15" />
-                <TextBlock x:Name="actorBlock" TextWrapping="Wrap" Text="actors" FontSize="15"/>
-
+                <TextBlock x:Name="directorBlock" TextWrapping="NoWrap" Text="directorName" FontSize="15" />
+                <TextBlock x:Name="actorBlock" TextWrapping="NoWrap" Text="actors" FontSize="15"/>
             </StackPanel>
         </Grid>
     </Grid>

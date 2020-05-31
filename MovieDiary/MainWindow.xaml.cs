@@ -23,7 +23,7 @@ namespace MovieDiary
         public MainWindow()
         {
             InitializeComponent();
-            ReviewWindow win = new ReviewWindow();
+            SearchWindow win = new SearchWindow();
             win.ShowDialog();
         }
 
