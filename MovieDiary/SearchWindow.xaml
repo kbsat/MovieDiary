@@ -9,7 +9,7 @@
     <Grid HorizontalAlignment="Left" Height="620" VerticalAlignment="Top" Width="624" Margin="0,-17,0,0">
         <Rectangle Fill="White" HorizontalAlignment="Left" Height="30" Margin="30,49,0,0" Stroke="Black" VerticalAlignment="Top" Width="562"/>
         <Label Content="영화 제목" HorizontalAlignment="Left" Margin="40,51,0,0" VerticalAlignment="Top" Height="30" FontSize="14" FontWeight="Bold"/>
-        <TextBox x:Name="Movie_searchName" HorizontalAlignment="Left" Height="29" Margin="121,50,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="398" FontSize="16" />
+        <TextBox x:Name="Movie_searchName" HorizontalAlignment="Left" Height="29" Margin="121,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="398" FontSize="16" KeyDown="Movie_searchName_KeyDown"/>
         <Button Content="검색" HorizontalAlignment="Left" Margin="517,50,0,0" VerticalAlignment="Top" Width="75" Height="29" Background="#FF2A8AD6" FontSize="14" FontWeight="Bold" Click="SearchButton_Click"/>
         <Button Content="내 서재에 추가" HorizontalAlignment="Left" Margin="469,589,0,0" VerticalAlignment="Top" Width="119" Background="#FF4079C2" Height="23" Click="AddButton_Click"/>
         <ListBox x:Name="myContact" HorizontalAlignment="Left" Height="482" Margin="30,94,0,0" VerticalAlignment="Top" Width="562" ScrollViewer.HorizontalScrollBarVisibility="Disabled" />

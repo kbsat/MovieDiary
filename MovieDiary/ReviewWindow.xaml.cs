@@ -188,6 +188,7 @@ namespace MovieDiary
                 conn.Close();
             }
             MessageBox.Show("저장 완료!");
+            Window.GetWindow(this).Close();
         }
     }
 }

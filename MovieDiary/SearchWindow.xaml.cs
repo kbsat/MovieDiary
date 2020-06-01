@@ -164,5 +164,13 @@ namespace MovieDiary
             MessageBox.Show("추가완료");
 
         }
+
+        private void Movie_searchName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.Key.Equals(Key.Enter))
+            {
+                SearchButton_Click(sender, e);
+            }
+        }
     }
 }
