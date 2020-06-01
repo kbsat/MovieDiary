@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MovieDiary"
         mc:Ignorable="d"
-        Title="경고" Height="200" Width="300">
+        Title="경고" Height="200" Width="300" ResizeMode="NoResize">
     <Grid >
         <StackPanel Orientation="Vertical">
             <Label Content="내 책장에서 영화가 완전히 삭제됩니다." HorizontalAlignment="Center" Margin="0 40 0 -10" FontSize="14"/>

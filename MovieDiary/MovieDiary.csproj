@@ -153,28 +153,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="poster_sample.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Image1.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="star.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="unstar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="darkknight.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="mazerunner.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="oceans eleven.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="aladdin.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="-Green_triangle.png" />

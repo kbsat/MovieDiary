@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:MovieDiary"
         mc:Ignorable="d"
         Title="리뷰하기" Height="500" Width="700
-        " Background="White">
+        " Background="White" ResizeMode="NoResize">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
@@ -28,7 +28,7 @@
                 <ColumnDefinition Width="5*"/>
                 <ColumnDefinition Width="0.5*"/>
             </Grid.ColumnDefinitions>
-            <Image x:Name="poster" Grid.Column="1" Source="poster_sample.jpg" Margin="5"/>
+            <Image x:Name="poster" Grid.Column="1" Margin="5"/>
             <StackPanel Orientation="Vertical" Grid.Column="2" Margin="3">
                 <Label x:Name="title" Content="프리즌 이스케이프" FontSize="17" FontWeight="Bold" FontFamily="HYHeadLine"/>
                 <Label x:Name="opening_data" Content="2020.05.06" FontSize="13"/>

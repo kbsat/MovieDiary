@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MovieDiary"
         mc:Ignorable="d"
-        Title="MainWindow" Height="770.293" Width="567">
+        Title="MainWindow" Height="770.293" Width="567" ResizeMode="NoResize">
     <Grid HorizontalAlignment="Left" Height="604" Margin="-3,0,-3.2,-2.4" VerticalAlignment="Top" Width="561">
         <Label Content="&#x9;&#x9;&#x9;&#x9;&#x9;내 책장" Padding="5" BorderBrush="Black" BorderThickness="0 0 0 3" Foreground="White" Background="#FF2A8AD6" Margin="0,0,0,575"/>
         <Grid HorizontalAlignment="Left" Height="662" Margin="0,29,-12,-87" VerticalAlignment="Top" Width="561">
