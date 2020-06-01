@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SQLite;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,34 +21,97 @@ namespace MovieDiary
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        public int i;
+        public SQLiteConnection conn=null;
         public MainWindow()
         {
             InitializeComponent();
+            InitDB();
+            ReadTable();
 
-            /*db에서 받고 받은 데이터로 항목 구성. 메소드화 필요*/
-            MyMovieControl mymov = new MyMovieControl();
-            Contact c = new Contact();
-            c.Title = "다크나이트";
-            c.ActorName = "니콜라스 케이지";
-            c.DirectorName = "홍길동";
-            c.imageUri = "https://upload.wikimedia.org/wikipedia/ko/thumb/0/00/%EB%8B%A4%ED%81%AC_%EB%82%98%EC%9D%B4%ED%8A%B8_%ED%8F%AC%EC%8A%A4%ED%84%B0.jpg/220px-%EB%8B%A4%ED%81%AC_%EB%82%98%EC%9D%B4%ED%8A%B8_%ED%8F%AC%EC%8A%A4%ED%84%B0.jpg";
-            c.OpeningData = "2020";
-            c.Star = 3;
-            mymov.MovieInfo = c;
 
-            MovieGrid.Children.Add(mymov);
-            Grid.SetRow(mymov, 0);
-            Grid.SetColumn(mymov, 0);
-            
+        }
+        public void InitDB()
+        {
+            string dbpath;
+            if (!System.IO.File.Exists(App.databasePath))
+            {
+                SQLiteConnection.CreateFile(App.databasePath);
+                dbpath = @"Data Source=" + App.databasePath;
+                conn = new SQLiteConnection(dbpath);
+                conn.Open();
+                CreateTable();
+            }
+            else
+            {
+                dbpath = @"Data Source=" + App.databasePath;
+                conn = new SQLiteConnection(dbpath);
+                conn.Open();
+            }
+
+        }
+        public void CreateTable()
+        {
+            string sql = "CREATE TABLE movies (Id INTEGER PRIMARY KEY AUTOINCREMENT," +
+                " Title string, SubTitle string, DirectorName string, ActorName string,"
+                + "ImageUri string, OpeningData string, Review string, Star Integer)";
+
+            SQLiteCommand com = new SQLiteCommand(sql, conn);
+            com.ExecuteNonQuery();
         }
 
+        public void ReadTable()
+        {
+
+            string sql = "select * from movies";
+
+            SQLiteCommand com = new SQLiteCommand(sql, conn);
+            SQLiteDataReader rdr = com.ExecuteReader();
+
+            for (i = 0; i < 9; i++)
+            {
+                if (rdr.Read())
+                {
+                    MyMovieControl mymov = new MyMovieControl();
+                    Contact c = new Contact();
+                    c.Title = rdr["Title"].ToString();
+                    c.ActorName = rdr["ActorName"].ToString();
+                    c.OpeningData = rdr["openingData"].ToString();
+                    c.DirectorName = rdr["directorName"].ToString();
+                    c.SubTitle = rdr["subtitle"].ToString();
+                    c.imageUri = rdr["ImageUri"].ToString();
+                    c.Review = rdr["Review"].ToString();
+                    c.Star = Convert.ToInt32(rdr["Star"].ToString());
+                    mymov.MovieInfo = c;
+
+                    MovieGrid.Children.Add(mymov);
+                    Grid.SetRow(mymov, i / 3);
+                    Grid.SetColumn(mymov, i % 3);
+                }
+                else
+                {
+                    break;
+                }
+            }
+            rdr.Close();
+        }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             SearchWindow win = new SearchWindow();
             win.ShowDialog();
-            
+            ReadTable();
+
         }
 
-        
+        private void PrevButton_Click(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void NextButton_Click(object sender, MouseButtonEventArgs e)
+        {
+
+        }
     }
 }

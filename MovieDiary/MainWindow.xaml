@@ -8,7 +8,7 @@
         Title="MainWindow" Height="770.293" Width="567">
     <Grid HorizontalAlignment="Left" Height="604" Margin="-3,0,-3.2,-2.4" VerticalAlignment="Top" Width="561">
         <Label Content="&#x9;&#x9;&#x9;&#x9;&#x9;내 책장" Padding="5" BorderBrush="Black" BorderThickness="0 0 0 3" Foreground="White" Background="#FF2A8AD6" Margin="0,0,0,575"/>
-        <Grid x:Name="MovieGrid" HorizontalAlignment="Left" Height="662" Margin="0,29,-12,-87" VerticalAlignment="Top" Width="561">
+        <Grid HorizontalAlignment="Left" Height="662" Margin="0,29,-12,-87" VerticalAlignment="Top" Width="561">
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
@@ -19,14 +19,27 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
+            <Grid x:Name="MovieGrid" HorizontalAlignment="Left" Height="662" VerticalAlignment="Top" Width="561" Grid.ColumnSpan="3" Grid.RowSpan="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+            </Grid>
             <Border Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" BorderThickness="2" BorderBrush="Black"/>
             <Border Grid.Column="1"  Grid.Row="0" Grid.RowSpan="3" BorderThickness="2" BorderBrush="Black">
             </Border>
             <Border Grid.Column="2" Grid.Row="0" Grid.RowSpan="3" BorderThickness="2" BorderBrush="Black"/>
             <Rectangle Fill="#FFD5D5D6" HorizontalAlignment="Left" Height="12" Margin="0,215,-3,0" Stroke="Black" VerticalAlignment="Top" Width="564" Grid.RowSpan="2" Grid.ColumnSpan="3"/>
-            
+
             <Rectangle Fill="#FFD5D5D6" HorizontalAlignment="Left" Height="12" Margin="0,215,-3,0" Stroke="Black" VerticalAlignment="Top" Width="564" Grid.RowSpan="2" Grid.ColumnSpan="3" Grid.Row="1"/>
         </Grid>
+
         <Button Content="영화 추가" HorizontalAlignment="Left" Height="23" Margin="19,700,0,-119" VerticalAlignment="Top" Width="143" RenderTransformOrigin="0.5,0.5" Click="Button_Click" Background="White">
             <Button.RenderTransform>
                 <TransformGroup>
@@ -37,7 +50,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Image Margin="242,700,286,-122" Source="-Green_triangle.png" RenderTransformOrigin="0.5,0.5">
+        <Image Width="30" Height="30" Source="-Green_triangle.png" RenderTransformOrigin="0.5,0.5" Margin="244,701,287,-127" MouseDown="PrevButton_Click">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -47,7 +60,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image Margin="236,747,295,-192" Source="-Green_triangle.png" RenderTransformOrigin="0.5,0.5">
+        <Image Width="30" Height="30" Source="-Green_triangle.png" RenderTransformOrigin="0.5,0.5" Margin="232,759,299,-185" MouseDown="NextButton_Click">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleY="-1"/>

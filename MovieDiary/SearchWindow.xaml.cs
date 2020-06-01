@@ -14,6 +14,7 @@ using System.Windows.Shapes;
 using System.Net;
 using System.IO;
 using Newtonsoft.Json;
+using System.Data.SQLite;
 
 namespace MovieDiary
 {
@@ -30,7 +31,8 @@ namespace MovieDiary
         public SearchWindow()
         {
             InitializeComponent();
-            /*Contact contact = new Contact(); 
+            /*
+             * Contact contact = new Contact(); 
             contact.Title = "프리즌 이스케이프";
             contact.OpeningData = "2020.05.06";
             contact.Genre = "모험,스릴러";
@@ -48,7 +50,7 @@ namespace MovieDiary
         }
         private void SearchButton_Click(object sender, RoutedEventArgs e)
         {
-            if(myContact.Items.Count != 0)
+            if (myContact.Items.Count != 0)
             {
                 myContact.Items.Clear();
             }
@@ -75,7 +77,7 @@ namespace MovieDiary
                 if (ex.items.Count >= 1) // 만약 입력값이 있을 시
                 {
                     int repeatNum;
-                    if(ex.items.Count >= 10) // 영화 검색출력값이 10개 이상인 경우
+                    if (ex.items.Count >= 10) // 영화 검색출력값이 10개 이상인 경우
                     {
                         repeatNum = 10; // 10개만 출력
                     }
@@ -107,7 +109,7 @@ namespace MovieDiary
 
                         string imageUri = ex.items[i].image;
                         cont.imageUri = imageUri;
-                        
+
                         Users[i].ContactData = cont;
                         myContact.Items.Add(Users[i]);
                     }
@@ -144,8 +146,23 @@ namespace MovieDiary
         {
             UserControl1 selectedUser = (UserControl1)myContact.SelectedItem;
             Contact selectedContact = selectedUser.ContactData;
-            MessageBox.Show("now selected " + selectedContact.Title);
-            
+
+            string dbpath = @"Data Source=" + App.databasePath;
+            using (SQLiteConnection conn = new SQLiteConnection(dbpath))
+            {
+                conn.Open();
+                string sql = "INSERT INTO movies (Title,SubTitle,DirectorName,ActorName,ImageUri,OpeningData,Review,Star) " +
+           "values ('" + selectedContact.Title + "','" + selectedContact.SubTitle + "','" + selectedContact.DirectorName + "','" + selectedContact.ActorName + "','" + selectedContact.imageUri + "'," +
+           "'" + selectedContact.OpeningData + "','" + selectedContact.Review + "'," + selectedContact.Star + ")";
+                SQLiteCommand com = new SQLiteCommand(sql, conn);
+                com.ExecuteNonQuery();
+                conn.Close();
+            }
+
+
+
+            MessageBox.Show("추가완료");
+
         }
     }
 }

@@ -53,9 +53,9 @@
                     <Image x:Name="star_4" Source="unstar.png" Width="30" Margin="0 0 5 0" MouseDown="star_MouseDown" />
                     <Image x:Name="star_5" Source="unstar.png" Width="30" MouseDown="star_MouseDown" />
                 </StackPanel>
-                <TextBox HorizontalAlignment="Center" VerticalAlignment="Center" Height="150" TextWrapping="Wrap" Text="TextBox" Width="550" BorderBrush="#FF2B2B2B" Background="#FFEAEAEA" Foreground="Black" FontSize="16"/>
+                <TextBox x:Name="reviewBox" HorizontalAlignment="Center" VerticalAlignment="Center" Height="150" TextWrapping="Wrap" Text="TextBox" Width="550" BorderBrush="#FF2B2B2B" Background="#FFEAEAEA" Foreground="Black" FontSize="16"/>
                 <Button Content="삭제" Width="60" Height="20" HorizontalAlignment="Left" Margin="26,5,0,0" FontWeight="Bold" Foreground="White" Background="#FFDE5050" BorderBrush="#FFBD9595" Click="DeleteButton_Click"/>
-                <Button Content="저장/등록" Width="100" Height="20" HorizontalAlignment="Right"  Margin="0,-20,26,0" FontWeight="Bold" BorderBrush="#FF939393" Foreground="White" Background="#FF6074F3"/>
+                <Button Content="저장/등록" Width="100" Height="20" HorizontalAlignment="Right"  Margin="0,-20,26,0" FontWeight="Bold" BorderBrush="#FF939393" Foreground="White" Background="#FF6074F3" Click="SaveButton_Click"/>
             </StackPanel>
         </Border>
 

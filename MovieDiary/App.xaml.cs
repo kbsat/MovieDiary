@@ -13,5 +13,9 @@ namespace MovieDiary
     /// </summary>
     public partial class App : Application
     {
+        public static string databaseName = "myMovieDiary.sqlite";
+        public static string FolderPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+        public static string databasePath = System.IO.Path.Combine(FolderPath, databaseName);
+
     }
 }

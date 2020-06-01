@@ -59,6 +59,8 @@ namespace MovieDiary
         {
             ReviewWindow win = new ReviewWindow(movInfo);
             win.ShowDialog();
+            ((MainWindow)System.Windows.Application.Current.MainWindow).ReadTable();
+
         }
     }
 

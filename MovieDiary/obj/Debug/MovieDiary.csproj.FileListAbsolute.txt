@@ -45,5 +45,13 @@ D:\수업\3학년2학기\윈도우즈 프로그래밍\MovieDiary\MovieDiary\bin\
 D:\수업\3학년2학기\윈도우즈 프로그래밍\MovieDiary\MovieDiary\bin\Debug\Newtonsoft.Json.xml
 D:\수업\3학년2학기\윈도우즈 프로그래밍\MovieDiary\MovieDiary\obj\Debug\MovieDiary.csproj.CopyComplete
 D:\수업\3학년2학기\윈도우즈 프로그래밍\MovieDiary\MovieDiary\obj\Debug\MyMovieControl.g.cs
-D:\수업\3학년2학기\윈도우즈 프로그래밍\MovieDiary\MovieDiary\obj\Debug\GeneratedInternalTypeHelper.g.cs
 D:\수업\3학년2학기\윈도우즈 프로그래밍\MovieDiary\MovieDiary\obj\Debug\MyMovieControl.baml
+D:\수업\3학년2학기\윈도우즈 프로그래밍\MovieDiary\MovieDiary\bin\Debug\EntityFramework.dll
+D:\수업\3학년2학기\윈도우즈 프로그래밍\MovieDiary\MovieDiary\bin\Debug\EntityFramework.SqlServer.dll
+D:\수업\3학년2학기\윈도우즈 프로그래밍\MovieDiary\MovieDiary\bin\Debug\System.Data.SQLite.dll
+D:\수업\3학년2학기\윈도우즈 프로그래밍\MovieDiary\MovieDiary\bin\Debug\System.Data.SQLite.EF6.dll
+D:\수업\3학년2학기\윈도우즈 프로그래밍\MovieDiary\MovieDiary\bin\Debug\System.Data.SQLite.Linq.dll
+D:\수업\3학년2학기\윈도우즈 프로그래밍\MovieDiary\MovieDiary\bin\Debug\EntityFramework.xml
+D:\수업\3학년2학기\윈도우즈 프로그래밍\MovieDiary\MovieDiary\bin\Debug\EntityFramework.SqlServer.xml
+D:\수업\3학년2학기\윈도우즈 프로그래밍\MovieDiary\MovieDiary\bin\Debug\System.Data.SQLite.xml
+D:\수업\3학년2학기\윈도우즈 프로그래밍\MovieDiary\MovieDiary\bin\Debug\System.Data.SQLite.dll.config

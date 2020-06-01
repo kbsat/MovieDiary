@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Data.SQLite;
 
 namespace MovieDiary
 {
@@ -19,7 +20,7 @@ namespace MovieDiary
     /// </summary>
     public partial class ReviewWindow : Window
     {
-        int star_num;
+        int star_num=1;
         Contact nowMovie;
         public ReviewWindow(Contact cont)
         {
@@ -39,6 +40,7 @@ namespace MovieDiary
             director_name.Content = nowMovie.DirectorName;
             actor_name.Content = nowMovie.ActorName;
             star_num = nowMovie.Star;
+            reviewBox.Text = nowMovie.Review;
             StarInit();
         }
 
@@ -151,15 +153,41 @@ namespace MovieDiary
             dw.ShowDialog();
             if(dw.isDelete == true)
             {
-                MessageBox.Show("삭제버튼클릭!");
+                
+                
+                string dbpath = @"Data Source=" + App.databasePath;
+                using (SQLiteConnection conn = new SQLiteConnection(dbpath))
+                {
+                    conn.Open();
+                    string sql = "DELETE FROM movies WHERE Title='"+nowMovie.Title+"'";
+                    SQLiteCommand com = new SQLiteCommand(sql, conn);
+                    com.ExecuteNonQuery();
+                    conn.Close();
+                }
+                MessageBox.Show("삭제 완료");
                 Window.GetWindow(this).Close();
-                /*삭제 기능 추가*/ 
+                ((MainWindow)System.Windows.Application.Current.MainWindow).MovieGrid.Children.Clear();
+                ((MainWindow)System.Windows.Application.Current.MainWindow).ReadTable();
             }
             else
             {
                 
             }
 
+        }
+
+        private void SaveButton_Click(object sender, RoutedEventArgs e)
+        {
+            string dbpath = @"Data Source=" + App.databasePath;
+            using (SQLiteConnection conn = new SQLiteConnection(dbpath))
+            {
+                conn.Open();
+                string sql = "UPDATE movies SET Review ='" + reviewBox.Text + "',Star=" + star_num + " WHERE Title='" + nowMovie.Title + "'";
+                SQLiteCommand com = new SQLiteCommand(sql, conn);
+                com.ExecuteNonQuery();
+                conn.Close();
+            }
+            MessageBox.Show("저장 완료!");
         }
     }
 }
