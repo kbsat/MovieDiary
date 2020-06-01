@@ -25,7 +25,7 @@ namespace MovieDiary
         {
             get
             {
-                return ContactData;
+                return contactdata;
             }
             set
             {
@@ -48,7 +48,7 @@ namespace MovieDiary
             InitializeComponent();
         }
     }
-    public class Contact
+    public class Contact // 영화의 정보를 담는 클래스
     {
         public string Title { get; set; }
         public string OpeningData { get; set; }
@@ -56,6 +56,8 @@ namespace MovieDiary
         public string DirectorName { get; set; }
         public string ActorName { get; set; }
         public string imageUri { get; set; }
+        public string Review { get; set; }
+        public int Star { get; set; }
     }
 }
 

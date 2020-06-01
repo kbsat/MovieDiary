@@ -44,3 +44,6 @@ D:\수업\3학년2학기\윈도우즈 프로그래밍\MovieDiary\MovieDiary\obj\
 D:\수업\3학년2학기\윈도우즈 프로그래밍\MovieDiary\MovieDiary\bin\Debug\Newtonsoft.Json.dll
 D:\수업\3학년2학기\윈도우즈 프로그래밍\MovieDiary\MovieDiary\bin\Debug\Newtonsoft.Json.xml
 D:\수업\3학년2학기\윈도우즈 프로그래밍\MovieDiary\MovieDiary\obj\Debug\MovieDiary.csproj.CopyComplete
+D:\수업\3학년2학기\윈도우즈 프로그래밍\MovieDiary\MovieDiary\obj\Debug\MyMovieControl.g.cs
+D:\수업\3학년2학기\윈도우즈 프로그래밍\MovieDiary\MovieDiary\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\수업\3학년2학기\윈도우즈 프로그래밍\MovieDiary\MovieDiary\obj\Debug\MyMovieControl.baml

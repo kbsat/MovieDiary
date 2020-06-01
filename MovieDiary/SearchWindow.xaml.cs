@@ -86,29 +86,29 @@ namespace MovieDiary
 
                     for (int i = 0; i < repeatNum; i++)
                     {
-                        Contact contact = new Contact();
+                        Contact cont = new Contact();
                         Users[i] = new UserControl1();
                         string title = ex.items[i].title.Replace("<b>", "");
                         title = title.Replace("</b>", "");
-                        contact.Title = title;
+                        cont.Title = title;
 
                         string pubDate = ex.items[i].pubDate;
-                        contact.OpeningData = pubDate;
+                        cont.OpeningData = pubDate;
 
                         string subtitle = ex.items[i].subtitle.Replace("<b>", "");
                         subtitle = subtitle.Replace("</b>", "");
-                        contact.SubTitle = subtitle;
+                        cont.SubTitle = subtitle;
 
                         string directorName = ex.items[i].director;
-                        contact.DirectorName = directorName;
+                        cont.DirectorName = directorName;
 
                         string actorName = ex.items[i].actor;
-                        contact.ActorName = actorName;
+                        cont.ActorName = actorName;
 
                         string imageUri = ex.items[i].image;
-                        contact.imageUri = imageUri;
+                        cont.imageUri = imageUri;
                         
-                        Users[i].ContactData = contact;
+                        Users[i].ContactData = cont;
                         myContact.Items.Add(Users[i]);
                     }
 
@@ -138,6 +138,14 @@ namespace MovieDiary
             public int start { get; set; }
             public int display { get; set; }
             public IList<Item> items { get; set; }
+        }
+
+        private void AddButton_Click(object sender, RoutedEventArgs e)
+        {
+            UserControl1 selectedUser = (UserControl1)myContact.SelectedItem;
+            Contact selectedContact = selectedUser.ContactData;
+            MessageBox.Show("now selected " + selectedContact.Title);
+            
         }
     }
 }

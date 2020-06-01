@@ -20,9 +20,26 @@ namespace MovieDiary
     public partial class ReviewWindow : Window
     {
         int star_num;
-        public ReviewWindow()
+        Contact nowMovie;
+        public ReviewWindow(Contact cont)
         {
+            nowMovie = cont;
+
             InitializeComponent();
+
+            // 선택한 파일의 정보로 화면구성
+            if (!nowMovie.imageUri.Equals("")) // 이미지 uri가 비어있지 않다면
+            {
+                poster.Source = new BitmapImage(new Uri(nowMovie.imageUri));
+
+            }
+            title.Content = nowMovie.Title;
+            subtitle.Content = nowMovie.SubTitle;
+            opening_data.Content = nowMovie.OpeningData;
+            director_name.Content = nowMovie.DirectorName;
+            actor_name.Content = nowMovie.ActorName;
+            star_num = nowMovie.Star;
+            StarInit();
         }
 
         private void star_MouseDown(object sender, MouseButtonEventArgs e)
@@ -37,6 +54,7 @@ namespace MovieDiary
                 star_4.Source = unstar;
                 star_5.Source = unstar;
                 star_num = 1;
+                
             }
             else if (sender.Equals(star_2))
             {
@@ -81,11 +99,11 @@ namespace MovieDiary
             }
         }
 
-        private void star_MouseUp(object sender, MouseButtonEventArgs e)
+        private void StarInit()
         {
             BitmapImage star = new BitmapImage(new Uri("star.png", UriKind.Relative));
             BitmapImage unstar = new BitmapImage(new Uri("unstar.png", UriKind.Relative));
-            if (sender.Equals(star_1))
+            if (star_num == 1)
             {
                 star_1.Source = star;
                 star_2.Source = unstar;
@@ -93,7 +111,7 @@ namespace MovieDiary
                 star_4.Source = unstar;
                 star_5.Source = unstar;
             }
-            else if (sender.Equals(star_2))
+            else if (star_num == 2)
             {
                 star_1.Source = star;
                 star_2.Source = star;
@@ -102,7 +120,7 @@ namespace MovieDiary
                 star_5.Source = unstar;
 
             }
-            else if (sender.Equals(star_3))
+            else if (star_num == 3)
             {
                 star_1.Source = star;
                 star_2.Source = star;
@@ -110,16 +128,15 @@ namespace MovieDiary
                 star_4.Source = unstar;
                 star_5.Source = unstar;
             }
-            else if (sender.Equals(star_4))
+            else if (star_num == 4)
             {
                 star_1.Source = star;
                 star_2.Source = star;
                 star_3.Source = star;
                 star_4.Source = star;
                 star_5.Source = unstar;
-
             }
-            else if (sender.Equals(star_5))
+            else if (star_num == 5)
             {
                 star_1.Source = star;
                 star_2.Source = star;
@@ -128,7 +145,6 @@ namespace MovieDiary
                 star_5.Source = star;
             }
         }
-
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
             DeleteAlert dw = new DeleteAlert();
@@ -136,6 +152,8 @@ namespace MovieDiary
             if(dw.isDelete == true)
             {
                 MessageBox.Show("삭제버튼클릭!");
+                Window.GetWindow(this).Close();
+                /*삭제 기능 추가*/ 
             }
             else
             {

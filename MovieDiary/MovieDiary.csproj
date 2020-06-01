@@ -61,6 +61,9 @@
     <Compile Include="DeleteAlert.xaml.cs">
       <DependentUpon>DeleteAlert.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MyMovieControl.xaml.cs">
+      <DependentUpon>MyMovieControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ReviewWindow.xaml.cs">
       <DependentUpon>ReviewWindow.xaml</DependentUpon>
     </Compile>
@@ -86,6 +89,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MyMovieControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ReviewWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

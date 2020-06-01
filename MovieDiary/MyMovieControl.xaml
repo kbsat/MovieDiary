@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="MovieDiary.MyMovieControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MovieDiary"
+             mc:Ignorable="d" Height="206.667" Width="170">
+    <Grid>
+        <Grid Grid.Column="0" Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="183*"/>
+                <RowDefinition Height="26*"/>
+                <RowDefinition Height="5*"/>
+            </Grid.RowDefinitions>
+            
+            <Image x:Name="moviePoster" Grid.Row="0" Source="darkknight.jpg" Margin="10,10,10,5" MouseDown="moviePoster_MouseDown"/>
+            <Label x:Name="movieName" Grid.Row="1" Content="제목" FontSize="11" HorizontalAlignment="Center" Width="170" HorizontalContentAlignment="Center"/>
+        </Grid>
+
+    </Grid>
+</UserControl>
