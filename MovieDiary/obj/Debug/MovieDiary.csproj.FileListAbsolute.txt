@@ -55,3 +55,40 @@ D:\수업\3학년2학기\윈도우즈 프로그래밍\MovieDiary\MovieDiary\bin\
 D:\수업\3학년2학기\윈도우즈 프로그래밍\MovieDiary\MovieDiary\bin\Debug\EntityFramework.SqlServer.xml
 D:\수업\3학년2학기\윈도우즈 프로그래밍\MovieDiary\MovieDiary\bin\Debug\System.Data.SQLite.xml
 D:\수업\3학년2학기\윈도우즈 프로그래밍\MovieDiary\MovieDiary\bin\Debug\System.Data.SQLite.dll.config
+C:\Users\kbsat\OneDrive\바탕 화면\수업관련\2020-3학년1학기\윈도우즈프로그래밍(정승한)\수은팀 프로젝트\MovieDiary\MovieDiary\bin\Debug\MovieDiary.exe.config
+C:\Users\kbsat\OneDrive\바탕 화면\수업관련\2020-3학년1학기\윈도우즈프로그래밍(정승한)\수은팀 프로젝트\MovieDiary\MovieDiary\bin\Debug\MovieDiary.exe
+C:\Users\kbsat\OneDrive\바탕 화면\수업관련\2020-3학년1학기\윈도우즈프로그래밍(정승한)\수은팀 프로젝트\MovieDiary\MovieDiary\bin\Debug\MovieDiary.pdb
+C:\Users\kbsat\OneDrive\바탕 화면\수업관련\2020-3학년1학기\윈도우즈프로그래밍(정승한)\수은팀 프로젝트\MovieDiary\MovieDiary\bin\Debug\EntityFramework.dll
+C:\Users\kbsat\OneDrive\바탕 화면\수업관련\2020-3학년1학기\윈도우즈프로그래밍(정승한)\수은팀 프로젝트\MovieDiary\MovieDiary\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\kbsat\OneDrive\바탕 화면\수업관련\2020-3학년1학기\윈도우즈프로그래밍(정승한)\수은팀 프로젝트\MovieDiary\MovieDiary\bin\Debug\Newtonsoft.Json.dll
+C:\Users\kbsat\OneDrive\바탕 화면\수업관련\2020-3학년1학기\윈도우즈프로그래밍(정승한)\수은팀 프로젝트\MovieDiary\MovieDiary\bin\Debug\System.Data.SQLite.dll
+C:\Users\kbsat\OneDrive\바탕 화면\수업관련\2020-3학년1학기\윈도우즈프로그래밍(정승한)\수은팀 프로젝트\MovieDiary\MovieDiary\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\kbsat\OneDrive\바탕 화면\수업관련\2020-3학년1학기\윈도우즈프로그래밍(정승한)\수은팀 프로젝트\MovieDiary\MovieDiary\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\kbsat\OneDrive\바탕 화면\수업관련\2020-3학년1학기\윈도우즈프로그래밍(정승한)\수은팀 프로젝트\MovieDiary\MovieDiary\bin\Debug\EntityFramework.xml
+C:\Users\kbsat\OneDrive\바탕 화면\수업관련\2020-3학년1학기\윈도우즈프로그래밍(정승한)\수은팀 프로젝트\MovieDiary\MovieDiary\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\kbsat\OneDrive\바탕 화면\수업관련\2020-3학년1학기\윈도우즈프로그래밍(정승한)\수은팀 프로젝트\MovieDiary\MovieDiary\bin\Debug\Newtonsoft.Json.xml
+C:\Users\kbsat\OneDrive\바탕 화면\수업관련\2020-3학년1학기\윈도우즈프로그래밍(정승한)\수은팀 프로젝트\MovieDiary\MovieDiary\bin\Debug\System.Data.SQLite.xml
+C:\Users\kbsat\OneDrive\바탕 화면\수업관련\2020-3학년1학기\윈도우즈프로그래밍(정승한)\수은팀 프로젝트\MovieDiary\MovieDiary\bin\Debug\System.Data.SQLite.dll.config
+C:\Users\kbsat\OneDrive\바탕 화면\수업관련\2020-3학년1학기\윈도우즈프로그래밍(정승한)\수은팀 프로젝트\MovieDiary\MovieDiary\obj\Debug\MovieDiary.csprojAssemblyReference.cache
+C:\Users\kbsat\OneDrive\바탕 화면\수업관련\2020-3학년1학기\윈도우즈프로그래밍(정승한)\수은팀 프로젝트\MovieDiary\MovieDiary\obj\Debug\DeleteAlert.g.cs
+C:\Users\kbsat\OneDrive\바탕 화면\수업관련\2020-3학년1학기\윈도우즈프로그래밍(정승한)\수은팀 프로젝트\MovieDiary\MovieDiary\obj\Debug\MainWindow.g.cs
+C:\Users\kbsat\OneDrive\바탕 화면\수업관련\2020-3학년1학기\윈도우즈프로그래밍(정승한)\수은팀 프로젝트\MovieDiary\MovieDiary\obj\Debug\MyMovieControl.g.cs
+C:\Users\kbsat\OneDrive\바탕 화면\수업관련\2020-3학년1학기\윈도우즈프로그래밍(정승한)\수은팀 프로젝트\MovieDiary\MovieDiary\obj\Debug\ReviewWindow.g.cs
+C:\Users\kbsat\OneDrive\바탕 화면\수업관련\2020-3학년1학기\윈도우즈프로그래밍(정승한)\수은팀 프로젝트\MovieDiary\MovieDiary\obj\Debug\SearchWindow.g.cs
+C:\Users\kbsat\OneDrive\바탕 화면\수업관련\2020-3학년1학기\윈도우즈프로그래밍(정승한)\수은팀 프로젝트\MovieDiary\MovieDiary\obj\Debug\UserControl1.g.cs
+C:\Users\kbsat\OneDrive\바탕 화면\수업관련\2020-3학년1학기\윈도우즈프로그래밍(정승한)\수은팀 프로젝트\MovieDiary\MovieDiary\obj\Debug\App.g.cs
+C:\Users\kbsat\OneDrive\바탕 화면\수업관련\2020-3학년1학기\윈도우즈프로그래밍(정승한)\수은팀 프로젝트\MovieDiary\MovieDiary\obj\Debug\MovieDiary_MarkupCompile.cache
+C:\Users\kbsat\OneDrive\바탕 화면\수업관련\2020-3학년1학기\윈도우즈프로그래밍(정승한)\수은팀 프로젝트\MovieDiary\MovieDiary\obj\Debug\MovieDiary_MarkupCompile.lref
+C:\Users\kbsat\OneDrive\바탕 화면\수업관련\2020-3학년1학기\윈도우즈프로그래밍(정승한)\수은팀 프로젝트\MovieDiary\MovieDiary\obj\Debug\DeleteAlert.baml
+C:\Users\kbsat\OneDrive\바탕 화면\수업관련\2020-3학년1학기\윈도우즈프로그래밍(정승한)\수은팀 프로젝트\MovieDiary\MovieDiary\obj\Debug\MainWindow.baml
+C:\Users\kbsat\OneDrive\바탕 화면\수업관련\2020-3학년1학기\윈도우즈프로그래밍(정승한)\수은팀 프로젝트\MovieDiary\MovieDiary\obj\Debug\MyMovieControl.baml
+C:\Users\kbsat\OneDrive\바탕 화면\수업관련\2020-3학년1학기\윈도우즈프로그래밍(정승한)\수은팀 프로젝트\MovieDiary\MovieDiary\obj\Debug\ReviewWindow.baml
+C:\Users\kbsat\OneDrive\바탕 화면\수업관련\2020-3학년1학기\윈도우즈프로그래밍(정승한)\수은팀 프로젝트\MovieDiary\MovieDiary\obj\Debug\SearchWindow.baml
+C:\Users\kbsat\OneDrive\바탕 화면\수업관련\2020-3학년1학기\윈도우즈프로그래밍(정승한)\수은팀 프로젝트\MovieDiary\MovieDiary\obj\Debug\UserControl1.baml
+C:\Users\kbsat\OneDrive\바탕 화면\수업관련\2020-3학년1학기\윈도우즈프로그래밍(정승한)\수은팀 프로젝트\MovieDiary\MovieDiary\obj\Debug\MovieDiary.g.resources
+C:\Users\kbsat\OneDrive\바탕 화면\수업관련\2020-3학년1학기\윈도우즈프로그래밍(정승한)\수은팀 프로젝트\MovieDiary\MovieDiary\obj\Debug\MovieDiary.Properties.Resources.resources
+C:\Users\kbsat\OneDrive\바탕 화면\수업관련\2020-3학년1학기\윈도우즈프로그래밍(정승한)\수은팀 프로젝트\MovieDiary\MovieDiary\obj\Debug\MovieDiary.csproj.GenerateResource.cache
+C:\Users\kbsat\OneDrive\바탕 화면\수업관련\2020-3학년1학기\윈도우즈프로그래밍(정승한)\수은팀 프로젝트\MovieDiary\MovieDiary\obj\Debug\MovieDiary.csproj.CoreCompileInputs.cache
+C:\Users\kbsat\OneDrive\바탕 화면\수업관련\2020-3학년1학기\윈도우즈프로그래밍(정승한)\수은팀 프로젝트\MovieDiary\MovieDiary\obj\Debug\MovieDiary.csproj.CopyComplete
+C:\Users\kbsat\OneDrive\바탕 화면\수업관련\2020-3학년1학기\윈도우즈프로그래밍(정승한)\수은팀 프로젝트\MovieDiary\MovieDiary\obj\Debug\MovieDiary.exe
+C:\Users\kbsat\OneDrive\바탕 화면\수업관련\2020-3학년1학기\윈도우즈프로그래밍(정승한)\수은팀 프로젝트\MovieDiary\MovieDiary\obj\Debug\MovieDiary.pdb

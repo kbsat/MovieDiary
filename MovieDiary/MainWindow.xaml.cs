@@ -101,9 +101,13 @@ namespace MovieDiary
 
             for (int i = 0; i < 9; i++)
             {
-                MovieGrid.Children.Add(mymovArray[i]);
-                Grid.SetRow(mymovArray[i], i / 3);
-                Grid.SetColumn(mymovArray[i], i % 3);
+                if(mymovArray.Length >= i)
+                {
+                    MovieGrid.Children.Add(mymovArray[i]);
+                    Grid.SetRow(mymovArray[i], i / 3);
+                    Grid.SetColumn(mymovArray[i], i % 3);
+                }
+                
             }
             rdr.Close();
         }
