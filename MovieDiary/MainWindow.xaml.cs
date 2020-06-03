@@ -101,7 +101,7 @@ namespace MovieDiary
 
             for (int i = 0; i < 9; i++)
             {
-                if(mymovArray.Length >= i)
+                if(mymovArray.Length > i)
                 {
                     MovieGrid.Children.Add(mymovArray[i]);
                     Grid.SetRow(mymovArray[i], i / 3);
