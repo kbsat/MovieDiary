@@ -18,10 +18,10 @@ namespace MovieDiary
     /// <summary>
     /// UserControl1.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class UserControl1 : UserControl
+    public partial class SearchMovieControl : UserControl
     {
-        private Contact contactdata;
-        public Contact ContactData // 밖으로 노출 시킬 property
+        private MovieInfo contactdata;
+        public MovieInfo ContactData // 밖으로 노출 시킬 property
         {
             get
             {
@@ -40,24 +40,13 @@ namespace MovieDiary
                 {
                     imageBox.Source = new BitmapImage(new Uri(contactdata.imageUri));
                 }
-                
+
             }
         }
-        public UserControl1()
+        public SearchMovieControl()
         {
             InitializeComponent();
         }
-    }
-    public class Contact // 영화의 정보를 담는 클래스
-    {
-        public string Title { get; set; }
-        public string OpeningData { get; set; }
-        public string SubTitle { get; set; }
-        public string DirectorName { get; set; }
-        public string ActorName { get; set; }
-        public string imageUri { get; set; }
-        public string Review { get; set; }
-        public int Star { get; set; }
     }
 }
 

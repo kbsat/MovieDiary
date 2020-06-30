@@ -21,8 +21,8 @@ namespace MovieDiary
     public partial class ReviewWindow : Window
     {
         int star_num=1;
-        Contact nowMovie;
-        public ReviewWindow(Contact cont)
+        MovieInfo nowMovie;
+        public ReviewWindow(MovieInfo cont)
         {
             nowMovie = cont;
 

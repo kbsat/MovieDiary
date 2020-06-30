@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\수업\3학년2학기\윈도우즈 프로그래밍\MovieDiary\MovieDiary\obj\Debug\
+C:\Users\kbsat\OneDrive\바탕 화면\수업관련\2020-3학년1학기\윈도우즈프로그래밍(정승한)\수은팀 프로젝트\MovieDiary\MovieDiary\obj\Debug\
 MovieDiary
 none
 false
 DEBUG;TRACE
-D:\수업\3학년2학기\윈도우즈 프로그래밍\MovieDiary\MovieDiary\App.xaml
-6739451820
+C:\Users\kbsat\OneDrive\바탕 화면\수업관련\2020-3학년1학기\윈도우즈프로그래밍(정승한)\수은팀 프로젝트\MovieDiary\MovieDiary\App.xaml
+6375070423
 
-111161415358
-20-1754016911
-DeleteAlert.xaml;MainWindow.xaml;MyMovieControl.xaml;ReviewWindow.xaml;SearchWindow.xaml;UserControl1.xaml;
+12-1699562215
+20869364445
+DeleteAlert.xaml;MainWindow.xaml;MyMovieControl.xaml;ReviewWindow.xaml;SearchMovieControl.xaml;SearchWindow.xaml;
 
-False
+True
 

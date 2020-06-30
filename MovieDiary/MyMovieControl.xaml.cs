@@ -20,9 +20,9 @@ namespace MovieDiary
     /// </summary>
     public partial class MyMovieControl : UserControl
     {
-        private Contact movInfo;
+        private MovieInfo movInfo;
 
-        public Contact MovieInfo // 밖으로 노출 시킬 property
+        public MovieInfo movieInfo // 밖으로 노출 시킬 property
 
         {
 

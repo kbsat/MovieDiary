@@ -26,11 +26,11 @@ namespace MovieDiary
         MyMovieControl[] mymovArray;
         int page = 0;
         public SQLiteConnection conn=null;
-        public int RowCount = 0;
+        public int RowCount = 0; // DB에 저장된 ROW의 개수
         public MainWindow()
         {
             InitializeComponent();
-            InitDB();
+            InitDB(); // 처음열었을 때는 DB생성, 테이블생성 이미 생성되있을 때는 그냥 connection만 연결
             ReadTable();
 
 
@@ -38,13 +38,13 @@ namespace MovieDiary
         public void InitDB()
         {
             string dbpath;
-            if (!System.IO.File.Exists(App.databasePath))
+            if (!System.IO.File.Exists(App.databasePath)) // 디비파일이 없었을때
             {
                 SQLiteConnection.CreateFile(App.databasePath);
                 dbpath = @"Data Source=" + App.databasePath;
                 conn = new SQLiteConnection(dbpath);
                 conn.Open();
-                CreateTable();
+                CreateTable(); // 테이블이 생성
             }
             else
             {
@@ -54,7 +54,7 @@ namespace MovieDiary
             }
 
         }
-        public void CreateTable()
+        public void CreateTable() // 디비파일이 존재하지 않았을 때 테이블 생성해주는 메소드
         {
             string sql = "CREATE TABLE movies (Id INTEGER PRIMARY KEY," +
                 " Title string, SubTitle string, DirectorName string, ActorName string,"
@@ -70,7 +70,7 @@ namespace MovieDiary
             page = 0;
             SQLiteCommand com = new SQLiteCommand(conn);
             com.CommandText = "select count(id) from movies";
-            // 열의 개수를 알아냄 -> 페이징 위함
+            // DB의 열의 개수( 저장된 영화의 수 )를 알아냄 -> 페이징 위함
             RowCount = Convert.ToInt32(com.ExecuteScalar());
 
 
@@ -83,22 +83,22 @@ namespace MovieDiary
             while (rdr.Read())
             {
                 MyMovieControl mymov = new MyMovieControl();
-                Contact c = new Contact();
-                c.Title = rdr["Title"].ToString();
-                c.ActorName = rdr["ActorName"].ToString();
-                c.OpeningData = rdr["openingData"].ToString();
-                c.DirectorName = rdr["directorName"].ToString();
-                c.SubTitle = rdr["subtitle"].ToString();
-                c.imageUri = rdr["ImageUri"].ToString();
-                c.Review = rdr["Review"].ToString();
-                c.Star = Convert.ToInt32(rdr["Star"].ToString());
-                mymov.MovieInfo = c;
+                MovieInfo nowMoive = new MovieInfo();
+                nowMoive.Title = rdr["Title"].ToString();
+                nowMoive.ActorName = rdr["ActorName"].ToString();
+                nowMoive.OpeningData = rdr["openingData"].ToString();
+                nowMoive.DirectorName = rdr["directorName"].ToString();
+                nowMoive.SubTitle = rdr["subtitle"].ToString();
+                nowMoive.imageUri = rdr["ImageUri"].ToString();
+                nowMoive.Review = rdr["Review"].ToString();
+                nowMoive.Star = Convert.ToInt32(rdr["Star"].ToString());
+                mymov.movieInfo = nowMoive;
 
                 mymovList.Add(mymov);
             }
 
+            
             mymovArray = mymovList.ToArray();
-
             for (int i = 0; i < 9; i++)
             {
                 if(mymovArray.Length > i)
@@ -115,8 +115,6 @@ namespace MovieDiary
         {
             SearchWindow win = new SearchWindow();
             win.ShowDialog();
-            MovieGrid.Children.Clear();
-            ReadTable();
 
         }
 
@@ -144,11 +142,11 @@ namespace MovieDiary
 
         private void NextButton_Click(object sender, MouseButtonEventArgs e)
         {
-            if(mymovArray.Length - page*9 > 9)
+            if (mymovArray.Length - page * 9 > 9) 
             {
                 page += 1;
                 MovieGrid.Children.Clear();
-                for (int i = (page * 9); i < (page * 9 + 9); i++)
+                for (int i = (page * 9); i < (page * 9 + 9); i++) // 18번째영화부터 26번째 영화까지 
                 {
                     if (i >= mymovArray.Length)
                     {

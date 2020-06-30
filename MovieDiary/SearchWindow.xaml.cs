@@ -23,28 +23,10 @@ namespace MovieDiary
     /// </summary>
     public partial class SearchWindow : Window
     {
-        /*UserControl1 use = new UserControl1();
-        UserControl1 use2 = new UserControl1();
-        UserControl1 use3 = new UserControl1();
-        UserControl1 use4 = new UserControl1();*/
-        UserControl1[] Users = new UserControl1[10];
+        SearchMovieControl[] Users = new SearchMovieControl[10];
         public SearchWindow()
         {
             InitializeComponent();
-            /*
-             * Contact contact = new Contact(); 
-            contact.Title = "프리즌 이스케이프";
-            contact.OpeningData = "2020.05.06";
-            contact.Genre = "모험,스릴러";
-            contact.DirectorName = "프란시스 아난";
-            contact.ActorName = "다니엘 래드클리프";
-            use.ContactData = contact;
-            use2.ContactData = contact;
-
-            myContact.Items.Add(use);
-            myContact.Items.Add(use2);
-            myContact.Items.Add(use3);
-            myContact.Items.Add(use4);*/
 
 
         }
@@ -88,8 +70,8 @@ namespace MovieDiary
 
                     for (int i = 0; i < repeatNum; i++)
                     {
-                        Contact cont = new Contact();
-                        Users[i] = new UserControl1();
+                        MovieInfo cont = new MovieInfo();
+                        Users[i] = new SearchMovieControl();
                         string title = ex.items[i].title.Replace("<b>", "");
                         title = title.Replace("</b>", "");
                         cont.Title = title;
@@ -144,8 +126,8 @@ namespace MovieDiary
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
-            UserControl1 selectedUser = (UserControl1)myContact.SelectedItem;
-            Contact selectedContact = selectedUser.ContactData;
+            SearchMovieControl selectedUser = (SearchMovieControl)myContact.SelectedItem;
+            MovieInfo selectedContact = selectedUser.ContactData;
 
             string dbpath = @"Data Source=" + App.databasePath;
             using (SQLiteConnection conn = new SQLiteConnection(dbpath))
@@ -162,6 +144,8 @@ namespace MovieDiary
 
 
             MessageBox.Show("추가완료");
+            ((MainWindow)System.Windows.Application.Current.MainWindow).MovieGrid.Children.Clear();
+            ((MainWindow)System.Windows.Application.Current.MainWindow).ReadTable();
 
         }
 

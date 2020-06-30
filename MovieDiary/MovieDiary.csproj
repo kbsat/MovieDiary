@@ -80,17 +80,18 @@
     <Compile Include="DeleteAlert.xaml.cs">
       <DependentUpon>DeleteAlert.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MovieInfo.cs" />
     <Compile Include="MyMovieControl.xaml.cs">
       <DependentUpon>MyMovieControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="ReviewWindow.xaml.cs">
       <DependentUpon>ReviewWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SearchMovieControl.xaml.cs">
+      <DependentUpon>SearchMovieControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SearchWindow.xaml.cs">
       <DependentUpon>SearchWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="UserControl1.xaml.cs">
-      <DependentUpon>UserControl1.xaml</DependentUpon>
     </Compile>
     <Page Include="DeleteAlert.xaml">
       <SubType>Designer</SubType>
@@ -116,11 +117,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SearchWindow.xaml">
+    <Page Include="SearchMovieControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserControl1.xaml">
+    <Page Include="SearchWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
