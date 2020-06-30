@@ -1,16 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using System.Data.SQLite;
 
 namespace MovieDiary
@@ -22,9 +13,11 @@ namespace MovieDiary
     {
         int star_num=1;
         MovieInfo nowMovie;
-        public ReviewWindow(MovieInfo cont)
+        BitmapImage star = new BitmapImage(new Uri("star.png", UriKind.Relative));
+        BitmapImage unstar = new BitmapImage(new Uri("unstar.png", UriKind.Relative));
+        public ReviewWindow(MovieInfo movInfo)
         {
-            nowMovie = cont;
+            nowMovie = movInfo;
 
             InitializeComponent();
 
@@ -46,8 +39,7 @@ namespace MovieDiary
 
         private void star_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            BitmapImage star = new BitmapImage(new Uri("star.png", UriKind.Relative));
-            BitmapImage unstar = new BitmapImage(new Uri("unstar.png", UriKind.Relative));
+            
             if (sender.Equals(star_1))
             {
                 star_1.Source = star;
@@ -103,8 +95,6 @@ namespace MovieDiary
 
         private void StarInit()
         {
-            BitmapImage star = new BitmapImage(new Uri("star.png", UriKind.Relative));
-            BitmapImage unstar = new BitmapImage(new Uri("unstar.png", UriKind.Relative));
             if (star_num == 1)
             {
                 star_1.Source = star;
@@ -149,11 +139,10 @@ namespace MovieDiary
         }
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
-            DeleteAlert dw = new DeleteAlert();
-            dw.ShowDialog();
-            if(dw.isDelete == true)
+            DeleteAlert deleteAlert = new DeleteAlert();
+            deleteAlert.ShowDialog();
+            if(deleteAlert.isDelete == true)
             {
-                
                 
                 string dbpath = @"Data Source=" + App.databasePath;
                 using (SQLiteConnection conn = new SQLiteConnection(dbpath))
@@ -168,10 +157,6 @@ namespace MovieDiary
                 Window.GetWindow(this).Close();
                 ((MainWindow)System.Windows.Application.Current.MainWindow).MovieGrid.Children.Clear();
                 ((MainWindow)System.Windows.Application.Current.MainWindow).ReadTable();
-            }
-            else
-            {
-                
             }
 
         }

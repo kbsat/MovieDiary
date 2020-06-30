@@ -40,7 +40,7 @@
             <Rectangle Fill="#FFD5D5D6" HorizontalAlignment="Left" Height="12" Margin="0,215,-3,0" Stroke="Black" VerticalAlignment="Top" Width="564" Grid.RowSpan="2" Grid.ColumnSpan="3" Grid.Row="1"/>
         </Grid>
 
-        <Button Content="영화 추가" HorizontalAlignment="Left" Height="23" Margin="19,700,0,-119" VerticalAlignment="Top" Width="143" RenderTransformOrigin="0.5,0.5" Click="Button_Click" Background="White">
+        <Button Content="영화 추가" HorizontalAlignment="Left" Height="23" Margin="19,700,0,-119" VerticalAlignment="Top" Width="143" RenderTransformOrigin="0.5,0.5" Click="AddButton_Click" Background="White">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

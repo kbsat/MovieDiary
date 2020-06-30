@@ -1,19 +1,9 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Data.SQLite;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace MovieDiary
 {
@@ -97,8 +87,7 @@ namespace MovieDiary
                 mymovList.Add(mymov);
             }
 
-            
-            mymovArray = mymovList.ToArray();
+            mymovArray = mymovList.ToArray(); // 인덱스 단위로 호출하기 위함
             for (int i = 0; i < 9; i++)
             {
                 if(mymovArray.Length > i)
@@ -111,7 +100,7 @@ namespace MovieDiary
             }
             rdr.Close();
         }
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void AddButton_Click(object sender, RoutedEventArgs e)
         {
             SearchWindow win = new SearchWindow();
             win.ShowDialog();

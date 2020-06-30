@@ -1,16 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using System.Net;
 using System.IO;
 using Newtonsoft.Json;
@@ -23,7 +14,7 @@ namespace MovieDiary
     /// </summary>
     public partial class SearchWindow : Window
     {
-        SearchMovieControl[] Users = new SearchMovieControl[10];
+        SearchMovieControl[] Movies = new SearchMovieControl[10];
         public SearchWindow()
         {
             InitializeComponent();
@@ -53,7 +44,7 @@ namespace MovieDiary
                 StreamReader reader = new StreamReader(stream, Encoding.UTF8);
                 string text = reader.ReadToEnd();
 
-                Example ex = (JsonConvert.DeserializeObject<Example>(text));
+                MovieItems ex = (JsonConvert.DeserializeObject<MovieItems>(text));
 
 
                 if (ex.items.Count >= 1) // 만약 입력값이 있을 시
@@ -70,30 +61,30 @@ namespace MovieDiary
 
                     for (int i = 0; i < repeatNum; i++)
                     {
-                        MovieInfo cont = new MovieInfo();
-                        Users[i] = new SearchMovieControl();
+                        MovieInfo movInfo = new MovieInfo();
+                        Movies[i] = new SearchMovieControl();
                         string title = ex.items[i].title.Replace("<b>", "");
                         title = title.Replace("</b>", "");
-                        cont.Title = title;
+                        movInfo.Title = title;
 
                         string pubDate = ex.items[i].pubDate;
-                        cont.OpeningData = pubDate;
+                        movInfo.OpeningData = pubDate;
 
                         string subtitle = ex.items[i].subtitle.Replace("<b>", "");
                         subtitle = subtitle.Replace("</b>", "");
-                        cont.SubTitle = subtitle;
+                        movInfo.SubTitle = subtitle;
 
                         string directorName = ex.items[i].director;
-                        cont.DirectorName = directorName;
+                        movInfo.DirectorName = directorName;
 
                         string actorName = ex.items[i].actor;
-                        cont.ActorName = actorName;
+                        movInfo.ActorName = actorName;
 
                         string imageUri = ex.items[i].image;
-                        cont.imageUri = imageUri;
+                        movInfo.imageUri = imageUri;
 
-                        Users[i].ContactData = cont;
-                        myContact.Items.Add(Users[i]);
+                        Movies[i].movinfo = movInfo;
+                        myContact.Items.Add(Movies[i]);
                     }
 
                     myContact.ScrollIntoView(myContact.Items[0]); // 맨위로 스크롤 옮긴다
@@ -115,7 +106,7 @@ namespace MovieDiary
             public string userRating { get; set; }
         }
 
-        public class Example
+        public class MovieItems
         {
             public string lastBuildDate { get; set; }
             public int total { get; set; }
@@ -127,20 +118,19 @@ namespace MovieDiary
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
             SearchMovieControl selectedUser = (SearchMovieControl)myContact.SelectedItem;
-            MovieInfo selectedContact = selectedUser.ContactData;
+            MovieInfo selectedMovie = selectedUser.movinfo;
 
             string dbpath = @"Data Source=" + App.databasePath;
             using (SQLiteConnection conn = new SQLiteConnection(dbpath))
             {
                 conn.Open();
                 string sql = "INSERT INTO movies (Title,SubTitle,DirectorName,ActorName,ImageUri,OpeningData,Review,Star) " +
-           "values ('" + selectedContact.Title + "','" + selectedContact.SubTitle + "','" + selectedContact.DirectorName + "','" + selectedContact.ActorName + "','" + selectedContact.imageUri + "'," +
-           "'" + selectedContact.OpeningData + "','" + selectedContact.Review + "'," + selectedContact.Star + ")";
+           "values ('" + selectedMovie.Title + "','" + selectedMovie.SubTitle + "','" + selectedMovie.DirectorName + "','" + selectedMovie.ActorName + "','" + selectedMovie.imageUri + "'," +
+           "'" + selectedMovie.OpeningData + "','" + selectedMovie.Review + "'," + selectedMovie.Star + ")";
                 SQLiteCommand com = new SQLiteCommand(sql, conn);
                 com.ExecuteNonQuery();
                 conn.Close();
             }
-
 
 
             MessageBox.Show("추가완료");
