@@ -125,7 +125,8 @@ namespace MovieDiary
             {
                 conn.Open();
                 string sql = "INSERT INTO movies (Title,SubTitle,DirectorName,ActorName,ImageUri,OpeningData,Review,Star) " +
-           "values ('" + selectedMovie.Title + "','" + selectedMovie.SubTitle + "','" + selectedMovie.DirectorName + "','" + selectedMovie.ActorName + "','" + selectedMovie.imageUri + "'," +
+           "values ('" + selectedMovie.Title + "','" + selectedMovie.SubTitle + "','" + selectedMovie.DirectorName + "','" 
+           + selectedMovie.ActorName + "','" + selectedMovie.imageUri + "'," +
            "'" + selectedMovie.OpeningData + "','" + selectedMovie.Review + "'," + selectedMovie.Star + ")";
                 SQLiteCommand com = new SQLiteCommand(sql, conn);
                 com.ExecuteNonQuery();

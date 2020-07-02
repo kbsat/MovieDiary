@@ -14,9 +14,8 @@ namespace MovieDiary
     {
         public List<MyMovieControl> mymovList = new List<MyMovieControl>();
         MyMovieControl[] mymovArray;
-        int page = 0;
+        int page = 0; // 현재 페이지의 위치를 나타냄
         public SQLiteConnection conn=null;
-        public int RowCount = 0; // DB에 저장된 ROW의 개수
         public MainWindow()
         {
             InitializeComponent();
@@ -59,11 +58,7 @@ namespace MovieDiary
 
             page = 0;
             SQLiteCommand com = new SQLiteCommand(conn);
-            com.CommandText = "select count(id) from movies";
-            // DB의 열의 개수( 저장된 영화의 수 )를 알아냄 -> 페이징 위함
-            RowCount = Convert.ToInt32(com.ExecuteScalar());
-
-
+            
             string sql = "select * from movies";
 
             com = new SQLiteCommand(sql, conn);
@@ -95,6 +90,10 @@ namespace MovieDiary
                     MovieGrid.Children.Add(mymovArray[i]);
                     Grid.SetRow(mymovArray[i], i / 3);
                     Grid.SetColumn(mymovArray[i], i % 3);
+                }
+                else
+                {
+                    break;
                 }
                 
             }
@@ -135,7 +134,7 @@ namespace MovieDiary
             {
                 page += 1;
                 MovieGrid.Children.Clear();
-                for (int i = (page * 9); i < (page * 9 + 9); i++) // 18번째영화부터 26번째 영화까지 
+                for (int i = (page * 9); i < (page * 9 + 9); i++) 
                 {
                     if (i >= mymovArray.Length)
                     {
